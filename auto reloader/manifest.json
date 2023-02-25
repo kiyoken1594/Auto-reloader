@@ -1,0 +1,23 @@
+{
+	"name": "Auto reloader",
+	"manifest_version": 3,
+	"version": "1.0",
+	"description": "You can reload page automatically.",
+	"icons": {
+		"48": "icon48.png"
+	},
+	"action": {
+		"default_icon": "icon48.png",
+		"default_popup": "popup.html"
+	},
+	"background": {
+	  "service_worker": "background.js"
+	},
+	"permissions": ["tabs","storage"],
+	"content_scripts": [
+		{
+		"matches": ["http://*/*", "https://*/*" ],
+		"js": ["content-script.js"]
+		}
+	]
+  }
