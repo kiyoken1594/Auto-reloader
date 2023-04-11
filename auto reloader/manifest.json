@@ -4,10 +4,13 @@
 	"version": "1.0",
 	"description": "You can reload page automatically.",
 	"icons": {
-		"48": "icon48.png"
+		"16": "icon16.png",
+		"32": "icon32.png",
+		"64": "icon64.png",
+		"256": "icon256.png"
 	},
 	"action": {
-		"default_icon": "icon48.png",
+		"default_icon": "icon32.png",
 		"default_popup": "popup.html"
 	},
 	"background": {
