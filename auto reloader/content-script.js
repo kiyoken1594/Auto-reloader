@@ -1,5 +1,6 @@
 chrome.runtime.onMessage.addListener(function(request){
-    console.log(request.text);
-    location.reload();
-}
-);
+    if(request.message == 'reloading'){
+        window.location.reload();
+    };
+    console.log(request.message);
+});
