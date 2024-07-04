@@ -14,7 +14,9 @@ chrome.runtime.onMessage.addListener(function (request) {
         }, timer);
         chrome.runtime.onMessage.addListener(function (request) {
             if (request.message == 'stopreload') {
-                paused = true;
+                if (tab == request.locate){
+                    paused = true;
+                };
             };
         });
     };
