@@ -13,10 +13,8 @@ chrome.runtime.onMessage.addListener(function (request) {
             chrome.tabs.sendMessage(tab, { text: "loading"});
         }, timer);
         chrome.runtime.onMessage.addListener(function (request) {
-            if (request.message == 'stopreload') {
-                if (tab == request.locate){
-                    paused = true;
-                };
+            if (request.message == 'stopreload' && tab == request.locate) {
+                paused = true;
             };
         });
     };
